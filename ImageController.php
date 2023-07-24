@@ -19,7 +19,7 @@ class ImageController extends Controller
         $filename = $video->getClientOriginalName();
 
         $video->move($path, $filename);
-        
+        // https://prnt.sc/__A1TzmO3YUX seen this screenshot
         $image = new Image();
         $image->image = $filename;
         $image->caption = $request->input('caption', '');
